@@ -71,8 +71,7 @@ body{
 
 .btn:hover {
   outline-style: none;
-  text-decoration: underline;
-  text-decoration-color: #00aced;
+  color:#00aced;
 }
 
 
