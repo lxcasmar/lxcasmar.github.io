@@ -240,7 +240,7 @@ ul.links {
     top: 180%;
   }
 
-ul.nav {
+.nav {
   position: absolute;
   left: 50%;
   top: 5px;
