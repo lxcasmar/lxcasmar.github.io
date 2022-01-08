@@ -5,6 +5,7 @@
     --black: #000000;
     --gray: #c2c2c2;
     --darkGray: #262626;
+    --midGray: #424242;
 }
 
 html{
@@ -38,24 +39,65 @@ html{
 
 ul.nav {
   position: absolute;
-  left: 50%;
-  top: 5px;
-  transform:translate(-50%,0);
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding:8px;
+  background-color: var(--midGray);
+  width: 100%;
+}
+
+ul.nav li {
+  float: left;
+  
+}
+
+ul.nav li a{
+  display: block;
+  text-align: center;
+  color: var(--gray);
+  text-decoration: none;
+  padding: 8px;
+}
+
+ul.nav li a:hover{
+  color:#00aced;
+}
+
+ul.nav li:last-child {
+  float:right;
+  transform: translate(-10px,0);
+}
+
+.btn {
+    
+  background-color: var(--midGray);
+  border: none;
+  color: var(--btnFontColor);
+  padding: 8px;
+}
+
+.btn:hover {
+outline-style: none;
+color:#00aced;
 }
 
 .profPic{
   height: 177px;
-  max-width: 100%;
   width: 220px;
+}
+
+.circlePic{
+  border-radius: 50%;
+  height: 177px;
+  width: 177px;
+  overflow: hidden;
   position: absolute;
   left: 50%;
-  transform: translate(-50%,0);
   top: 15%;
-  border-radius: 50%;
-  overflow: hidden;
+  transform: translate(-50%,0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body{
@@ -67,23 +109,6 @@ body{
     padding: 0;
 
 }
-.btn {
-    position: absolute;
-    top: 10%;
-    left: 50px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    color: var(--btnFontColor);
-    background-color: var(--btnBg);
-}
-
-.btn:hover {
-  outline-style: none;
-  color:#00aced;
-}
-
 
 h2{
     font-weight: 70;
@@ -245,8 +270,5 @@ ul.links {
     background: #e46880;
   }
 
-  .footer{
-    position: absolute;
-    top: 180%;
-  }
+
 
