@@ -36,6 +36,16 @@ html{
   --shadow: rgba(0,0,0,0.5);    /*shadow before hover*/
 }
 
+ul.nav {
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  transform:translate(-50%,0);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .profPic{
   height: 177px;
   max-width: 100%;
@@ -240,12 +250,3 @@ ul.links {
     top: 180%;
   }
 
-.nav {
-  position: absolute;
-  left: 50%;
-  top: 5px;
-  transform:translate(-50%,0);
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
