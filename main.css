@@ -241,6 +241,10 @@ ul.links {
   }
 
 ul.nav {
+  position: absolute;
+  left: 50%;
+  top: 5px;
+  transform:translate(-50%,0);
   list-style-type: none;
   margin: 0;
   padding: 0;
