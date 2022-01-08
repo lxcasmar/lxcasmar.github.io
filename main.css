@@ -69,7 +69,11 @@ body{
     background-color: var(--btnBg);
 }
 
-.btn:focus {outline-style: none;}
+.btn:focus {
+  outline-style: none;
+  text-decoration: underline;
+  text-decoration-color: #00aced;
+}
 
 
 h2{
