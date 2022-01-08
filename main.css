@@ -239,3 +239,9 @@ ul.links {
     position: absolute;
     top: 180%;
   }
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
