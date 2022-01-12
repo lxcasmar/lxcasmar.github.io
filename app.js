@@ -10,20 +10,20 @@ switcher.addEventListener('click', function() {
     className =  document.body.className;
     if(className == "dark-theme") {
         this.textContent = "Light";
-        localStorage.setItem('dark-theme','enabled');
+        
     }
     else {
         this.textContent = "Dark";
-        localStorage.setItem('dark-theme','disabled');
+        l
     }
     console.log('Current class (theme) name: ' + className);
 });
 
-if (localStorage.getItem('dark-theme') == 'disabled'){
-    className  = document.body.className;
-    document.body.classsList.toggle('light-theme');
-    if (className == "dark-theme")
-        switcher.textContent = "light";
-    else
-        switcher.textContent = "Dark";
-}
+
+const toggle = document.querySelector('.toggle input');
+
+toggle.addEventListener('click',() => {
+    document.body.classList.toggle('light-theme');
+    const ld = toggle.parentNode.querySelector('.ld');
+    ld.textContent = toggle.checked ? 'L' : 'D';
+});
