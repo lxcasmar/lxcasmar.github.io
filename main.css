@@ -41,6 +41,7 @@ html{
   position: fixed;
   left: 50%;
   transform: translate(-50%);
+  top: 15px;
 }
 
 ul.nav {
