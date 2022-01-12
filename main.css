@@ -10,7 +10,7 @@
 
 html{
   overflow-y: scroll;
-  overflow-x: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -143,6 +143,7 @@ input:checked + .slider:before {
 
 .circlePic{
   border-radius: 50%;
+  max-width: 100%;
   height: 177px;
   width: 177px;
   overflow: hidden;
@@ -166,9 +167,47 @@ body{
     color: var(--fontColor);
 }
 
-h2{
+img {
+  max-height: 100%;
+  width: auto;
+}
+
+img.resize {
+  position: absolute;
+  width: 100%;
+  /*height: auto;*/
+  max-height: 100%;
+  min-height: 100%;
+}
+
+.caption {
+  background-color: rgba(0,0,0,.5);
+  font-size: smaller;
+  color: var(--gray);
+  font-style: italic;
+  text-align: center;
+  opacity: 0;
+  padding: 2px;
+  position: absolute;
+  top: 97.8%;
+}
+
+.bgHolder:hover .caption{
+  opacity: 1;
+}
+
+h2,h3{
     font-weight: 70;
     text-align: center;
+}
+
+h3.two{
+  color: var(--gray);
+}
+p {
+  margin-right:5%;
+  margin-left:5%;
+  color: var(--gray);
 }
 
 .name{
@@ -179,14 +218,14 @@ h2{
     transform: translate(-50%,-50%);
     margin: 0;
     text-align: center;
-    color: var(--fontColor);
+    color: var(--darkGray);
     font-family: Georgia;
     white-space: nowrap;
 }
 
 .csee{
-    font-size: 45px;
-    font-weight: 200px;
+    font-size: 22;
+    font-weight: 100;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font: 'Times New Roman';
     position: absolute;
@@ -194,12 +233,12 @@ h2{
     left: 50%;
     transform: translate(-50%,-50%);
     white-space: nowrap;
-    color: var(--fontColor);
+    color: var(--darkGray);
 }
 
 .hith{
   position: absolute;
-  top: 60%;
+  top: 110%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -207,8 +246,9 @@ h2{
 .abMe{
   color: var(--fontColor);
   position: absolute;
-  left: 5%;
-  top: 65%;
+ 
+  margin-right: 5%;
+  top: 115%;
 }
 
 .projHeader{
@@ -216,28 +256,83 @@ h2{
   position: absolute;
   left: 50%;
   transform: translate(-50%);
-  top: 90%;
+  top: 140%;
 }
 
-.proj{
-  color: var(--fontColor);
+.projContainer{
   position: absolute; 
-  left: 5%;
-  top: 90%;
+  width: 100%;
+  left: 10%;
+  top: 140%;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
 }
 
+
+.projImage1 {
+  height:198px;
+  width: 350px;
+  object-fit: contain;
+  position: relative;
+  top: 50px;
+  
+}
+
+.projImage2 {
+  height:198px;
+  width: 350px;
+  object-fit: contain;
+  position: absolute;
+  top:100px;
+  left: 400px;
+}
+
+.projImageOverlay1 {
+  opacity: 0;
+  font-size: smaller;
+  background-color: rgba(0,0,0,.7);
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  height: 198px;
+  width: 350px;
+}
+
+.projImageOverlay2 {
+  opacity: 0;
+  font-size: smaller;
+  background-color: rgba(0,0,0,.7);
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  right: 0;
+  height: 198px;
+  width: 350px;
+}
+
+.projImageOverlay1:hover{
+  opacity: 1;
+}
+
+.projImageOverlay2:hover{
+  opacity: 1;
+}
+
+/* left mid right for three lists*/
 .left{
   vertical-align: top;
   float: left;
   position: absolute;
   left: 5%;
-  top: 72%;
+  top: 122%;
 }
 
 .mid {
   vertical-align: top;
   position: absolute;
-  top: 72%;
+  top: 122%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -245,7 +340,7 @@ h2{
 .right{
   vertical-align: top;
   position: absolute;
-  top: 72%;
+  top: 122%;
   right: 5%;
   
 }
@@ -261,25 +356,27 @@ ul{
 
 ul.links {
     position:absolute;
-    top: 150%;
-    left:50%;
+    top: 70%;
+    left:47%;
     transform:translate(-50%, -50%);
     display:flex;
     margin:0;
     padding-bottom: 10%;
+    
   }
   
   ul.links li {
     list-style:none;
-    margin: 5px;
+    margin: 50px;
   }
   
   ul.links li a .fa {
     font-size: 40px;
     color: #262626; /*icon color before hover*/
     color: var(--ulFontColor);
-    line-height:80px;
+    line-height:60px;
     transition: .5s;
+    
     padding-right: 14px;
   }
   
@@ -298,8 +395,9 @@ ul.links {
     text-decoration: none;
     display:absolute;
     display:block;
-    width:210px;
-    height:80px;
+    
+    width:55px;
+    height:60px;
     background: #fff;   /*top of the boxes*/
     background: var(--ulboxColor);
     text-align:left;
